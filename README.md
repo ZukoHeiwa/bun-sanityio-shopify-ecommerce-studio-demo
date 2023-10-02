@@ -1,85 +1,125 @@
-# Sanity Studio for Shopify Projects
+# bun-sanityio-movie-studio-demo
 
-<p><img src="https://user-images.githubusercontent.com/209129/173606241-ae6694f7-57f0-4ed7-9d05-60c563c4233b.png" width="800" /></p>
+bun-sanityio-movie-studio-demo is a simple Sanity io studio with schemas using bun package manager.
 
-## About
+## Table of Contents
 
-This Sanity Studio is configured for headless Shopify projects that use the official [Sanity Connect app][sanity-shopify], allowing you to extend Shopify products and collections with your own rich editorial content.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support and Contact](#support-and-contact)
+- [Author](#author)
+## Installation
 
-It contains examples of customizing your [desk structure][docs-desk-structure], [document actions][docs-document-actions] and [input components][docs-input-components].
-
-This studio can be used with our [Hydrogen starter][hydrogen-demo], your frontend, or anywhere else you want your e-commerce content to go.
-
-## Features
-
-This studio comes preconfigured with Shopify-friendly content schemas and a whole host of customizations to make managing Shopify data in your Sanity studio easier.
-
-It also comes with several convenient layout modules which can be re-used across various pages.
-
-**[View studio features][studio-features]**
-
-## Assumptions
-
-No two custom storefronts are the same, and we've taken a few strong opinions on how we've approached this studio.
-
-- Synced Shopify data for `collection`, `product` and `productVariant` documents are stored in a read-only object, `store`
-- Shopify is the source of truth for both product titles, slugs (handles) and thumbnail images
-- Shopify is the source of truth for collections
-- Sanity is used as an additional presentational layer to add custom metadata to both Shopify collections and products
-  - For products: this includes a portable text field with support for editorial modules
-  - For collections: this includes a customizable array of editorial modules
-- Some images (such as product and cart line item thumbnails) are served by Shopify's CDN whilst other images (such as those served in editorial modules) are handled by Sanity's Image API
-- We only concern ourselves with incoming data from Shopify _collections_, _products_ and _product variants_
-
-We believe these rules work well for simpler use cases, and keeping product titles, images and slugs handled by Shopify helps keep content consistent as you navigate from your product views to the cart and ultimately checkout. Managing collections in Shopify gives you the flexibility to take full advantage of manual and automated collections.
-
-You may have differing opinions on how content best be modeled to fit your particular needs – this is normal and encouraged! Fortunately, Sanity was built with this flexibility in mind, and we've written [a guide on structured content patterns of e-commerce][structured-content-patterns] which may help inform how to tackle this challenge.
-
-## Setup
-
-If you're reading this on GitHub, chances are you haven't initialized the studio locally yet. To do so, run the following shell command:
-
-```sh
-# run a one-off initializing script:
-npx @sanity/cli init --template shopify
+Before make sure you have Sanity io client installed:
+```
+sanity --version
+```
+If you don't have it run:
+```
+npm install -g @sanity/cli
 ```
 
-Make sure to run the tagged release! (`@sanity/cli`)
-
-## Local Development
-
-### Starting development server
-
-```sh
-npm run dev
+You need to download bun, that is currently today available for macOS and Linux(Octomber 2, 2023):
+```
+curl -fsSL https://bun.sh/install | bash
 ```
 
-### Deploying the studio
+Now run bun-sanityio-movie-studio-demo on your local machine, follow these steps:
 
-```sh
-npm run deploy
+1. Clone the repository:
+
+    ```bash
+   git clone https://github.com/zukoheiwa/bun-sanityio-movie-studio-demo.git
+    ```
+2. Navigate to the project directory:
+
+    ```bash
+    cd bun-sanityio-movie-studio-demo
+    ```
+So far now you have a basic understanding of a demo project studio schema look, but you have to create your own one to start using the database right.
+
+Create your own studio database with Sanity io by running this:
+```
+sanity init
+```
+- Continue creating a Sanity Studio v3 project? (Y/n) ```Y```
+- You might need to create account or login to a sanity account with your prefrence.
+- After that you can choose to create a studio schema project Your project name: (My Sanity Project) 
+- Use the default dataset configuration? (Y/n) ```Y```
+- Project output path: /home/zukoheiwa/Workspace/Sanity Io/my-sanity-project "Just click Enter"
+- Now you have 3 demo studio schemas by Sanity io 1. Movie project (schema + sample data), 2. E-commerce (Shopify), 3. Blog (Schema), or You can choose Clean project with no prefined schemas, for this project you will choose the 2nd one 2. E-commerce (Shopify).
+- Do you want to use TypeScript? (Y/n) ```n```
+- Package manager to use for installing dependencies? "Choose manual"
+
+Your Sanity io studio schema is ready to run and taken care,
+
+1. Navigate to the project:
+```
+cd my-sanity-project
 ```
 
-### Upgrading Sanity Studio
-
-```sh
-npm run upgrade
+2. Install dependencies:
+```
+bun install
 ```
 
-If you have the [Sanity CLI][docs-cli] installed, you can also run this with `sanity start|deploy|upgrade`. It comes with additional useful functionality.
+3. Start the development:
+```
+bun run dev
+```
 
-## License
 
-This repository is published under the [MIT](license) license.
+# Usage
+Usage
+Once the app is running, open your web browser and access bun-sanityio-movie-studio-demo at http://localhost:3333. Here's how you can use it:
 
-[docs-cli]: https://www.sanity.io/docs/cli
-[docs-custom-input-components]: https://www.sanity.io/docs/custom-input-components
-[docs-desk-structure]: https://www.sanity.io/docs/structure-builder
-[docs-document-actions]: https://www.sanity.io/docs/document-actions
-[docs-input-components]: https://www.sanity.io/docs/custom-input-widgets
-[docs-string-input]: https://www.sanity.io/docs/string-type
-[hydrogen-demo]: https://github.com/sanity-io/hydrogen-sanity-demo
-[license]: https://github.com/sanity-io/sanity/blob/next/LICENSE
-[sanity-shopify]: https://apps.shopify.com/sanity-connect
-[structured-content-patterns]: https://www.sanity.io/guides/structured-content-patterns-for-e-commerce
-[studio-features]: docs/features.md
+- Open your prefered browser and open this http://localhost:3333
+- You can see the simple E-commerce (Shopify) Demo
+
+# Features
+- 0/500k API CDN Requests.
+- 0/100k API Requests.
+- 0B/5GB Assets.
+- 0B/10GB Bandwidth.
+- 0/2 Datasets.
+- 0/10k Documents.
+- 0/3 Non-admin members.
+
+# Contributing
+We welcome contributions from the community! To contribute to bun-sanityio-movie-studio-demo, please follow these guidelines:
+1. Fork the repository and create a new branch for your feature or bug fix.
+2. Make your changes, ensuring to maintain coding standards.
+3. Submit a pull request, describing your changes in detail.
+
+# License
+bun-sanityio-movie-studio-demo is open-source software licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
+
+# Support and Contact
+If you have questions, encounter issues, or want to get involved in the development, please contact me via:
+- 📫 via Email **zukoheiwabusiness@gmail.com**
+- 📄 via Issues https://github.com/zukoheiwa/bun-sanityio-movie-studio-demo/issues 
+
+## Author
+&#8226; ZukoHeiwa
+
+<div>
+<a href="https://www.youtube.com/channel/UCt3X0lR50_2yqdj9o3LUpKA" target="blank">
+  <img src="https://img.shields.io/badge/@ZukoHeiwa-blue?style=for-the-badge&logo=twitter" alt="twitter" />
+</a>
+<br>
+<a href="https://twitter.com/ZukoHeiwa" target="blank">
+  <img src="https://img.shields.io/badge/@ZukoHeiwa-red?style=for-the-badge&logo=youtube" alt="youtube" />
+</a>
+<br>
+<a href="https://github.com/ZukoHeiwa" target="blank">
+  <img src="https://img.shields.io/badge/@ZukoHeiwa-black?style=for-the-badge&logo=github" alt="github" />
+</a>
+</div>
+<br>
+
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=zukoheiwa&show_icons=true&locale=en&layout=compact" alt="zukoheiwa" /></p>
+
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=zukoheiwa&show_icons=true&locale=en" alt="zukoheiwa" /></p>
