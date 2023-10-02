@@ -1,6 +1,6 @@
-# bun-sanityio-movie-studio-demo
+# bun-sanityio-shopify-ecommerce-studio-demo
 
-bun-sanityio-movie-studio-demo is a simple Sanity io studio with schemas using bun package manager.
+bun-sanityio-shopify-ecommerce-studio-demo is a simple Sanity io studio with schemas using bun package manager.
 
 ## Table of Contents
 
@@ -27,17 +27,17 @@ You need to download bun, that is currently today available for macOS and Linux(
 curl -fsSL https://bun.sh/install | bash
 ```
 
-Now run bun-sanityio-movie-studio-demo on your local machine, follow these steps:
+Now run bun-sanityio-shopify-ecommerce-studio-demo on your local machine, follow these steps:
 
 1. Clone the repository:
 
     ```bash
-   git clone https://github.com/zukoheiwa/bun-sanityio-movie-studio-demo.git
+   git clone https://github.com/zukoheiwa/bun-sanityio-shopify-ecommerce-studio-demo.git
     ```
 2. Navigate to the project directory:
 
     ```bash
-    cd bun-sanityio-movie-studio-demo
+    cd bun-sanityio-shopify-ecommerce-studio-demo
     ```
 So far now you have a basic understanding of a demo project studio schema look, but you have to create your own one to start using the database right.
 
@@ -74,7 +74,7 @@ bun run dev
 
 # Usage
 Usage
-Once the app is running, open your web browser and access bun-sanityio-movie-studio-demo at http://localhost:3333. Here's how you can use it:
+Once the app is running, open your web browser and access bun-sanityio-shopify-ecommerce-studio-demo at http://localhost:3333. Here's how you can use it:
 
 - Open your prefered browser and open this http://localhost:3333
 - You can see the simple E-commerce (Shopify) Demo
@@ -89,18 +89,18 @@ Once the app is running, open your web browser and access bun-sanityio-movie-stu
 - 0/3 Non-admin members.
 
 # Contributing
-We welcome contributions from the community! To contribute to bun-sanityio-movie-studio-demo, please follow these guidelines:
+We welcome contributions from the community! To contribute to bun-sanityio-shopify-ecommerce-studio-demo, please follow these guidelines:
 1. Fork the repository and create a new branch for your feature or bug fix.
 2. Make your changes, ensuring to maintain coding standards.
 3. Submit a pull request, describing your changes in detail.
 
 # License
-bun-sanityio-movie-studio-demo is open-source software licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
+bun-sanityio-shopify-ecommerce-studio-demo is open-source software licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
 
 # Support and Contact
 If you have questions, encounter issues, or want to get involved in the development, please contact me via:
 - 📫 via Email **zukoheiwabusiness@gmail.com**
-- 📄 via Issues https://github.com/zukoheiwa/bun-sanityio-movie-studio-demo/issues 
+- 📄 via Issues https://github.com/zukoheiwa/bun-sanityio-shopify-ecommerce-studio-demo/issues 
 
 ## Author
 &#8226; ZukoHeiwa
